@@ -1,0 +1,12 @@
+<div class="listado-clientes">
+    <h2>Listado de Clientes</h2>
+    <ul>
+      <li *ngFor="let ticket of listadoTicketsWS">
+        {{ ticket.numero }} - {{ ticket.fechaIngreso }} - {{ ticket.fechaSalida }} - {{ ticket.estado }} -{{ ticket.vehiculo.placa }} - {{ ticket.tarifa.tipo}}
+        <!-- 
+        <button (click)="eliminarPersona(cliente)">Eliminar</button>
+        <button (click)="listar(cliente)">Listar</button>
+        -->
+      </li>
+    </ul>
+  </div>

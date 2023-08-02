@@ -1,0 +1,46 @@
+<!-- cliente.component.html -->
+<div class="registro-y-listado">
+    <!-- Sección de Registro de Cliente -->
+    <div class="registro-cliente">
+      <h2>Crear Vehiculo</h2>
+      <label for="txtCedula">Placa:</label>
+      <input id="txtCedula" [(ngModel)]="vehiculo.placa" />
+      <br />
+      <label for="txtNombre">Marca:</label>
+      <input id="txtNombre" [(ngModel)]="vehiculo.marca" />
+      <br />
+      <br />
+      <label for="txtNombre">Modelo:</label>
+      <input id="txtNombre" [(ngModel)]="vehiculo.modelo" />
+      <br />
+      <label for="selColor">Tipo:</label>
+      <select id="selColor" [(ngModel)]="vehiculo.color">
+        <option value="">Seleccionar tipo</option>
+        <option *ngFor="let color of coloresPredefinidos" [value]="color">{{ color }}</option>
+      </select>
+
+
+      
+      <br />
+      <br />
+      <button (click)="agregarVehiculo()">Guardar/Actualizar</button>
+    </div>
+  
+    <!-- Sección de Listado de Clientes -->
+    <div class="listado-cliente">
+      <h2>Listado de Vehiculos</h2>
+      <ul>
+        <li *ngFor="let vehiculo of listadoVehiculosWS">
+          {{ vehiculo.placa }} - {{ vehiculo.marca }} - {{ vehiculo.modelo }} - {{ vehiculo.color }}
+          <button (click)="eliminarVehiculo(vehiculo)">Eliminar</button>
+          <button (click)="listar(vehiculo)">Listar</button>
+        </li>
+        <!--
+        <li *ngFor="let vehiculo of vehiculoService.listar()">
+          {{ vehiculo.placa }}
+        </li>
+        -->
+      </ul>
+    </div>
+  </div>
+  

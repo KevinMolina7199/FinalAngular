@@ -1,0 +1,62 @@
+/* pagina-inicio.component.css */
+.titulo-llamativo {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .titulo-llamativo h1 {
+    font-size: 3rem;
+  }
+  
+  .informacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .imagen-derecha img {
+    max-width: 300px;
+    margin-right: 2rem;
+  }
+  
+  .texto-izquierda p {
+    font-size: 1.2rem;
+  }
+  
+  .menu-debajo {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .menu-debajo nav {
+    display: flex;
+    flex-direction: column; /* Cambiamos la dirección del menú a vertical */
+    align-items: center; /* Alineamos los elementos del menú al centro vertical */
+  }
+  
+  .menu-debajo ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-debajo ul li {
+    cursor: pointer;
+    margin-bottom: 1rem; /* Espacio entre elementos del menú */
+  }
+  
+  .menu-debajo ul li:last-child {
+    margin-bottom: 0; /* Quitamos el espacio inferior al último elemento del menú */
+  }
+  
+  .menu-debajo ul li a {
+    color: purple; /* Cambia el color del texto del menú a morado */
+    text-decoration: none; /* Quitamos la decoración de subrayado de los enlaces */
+  }
+  
+  .menu-debajo ul li a:hover {
+    text-decoration: underline; /* Agregamos subrayado al pasar el cursor sobre los enlaces */
+  }
+  

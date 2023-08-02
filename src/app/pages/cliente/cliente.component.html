@@ -1,0 +1,37 @@
+<!-- cliente.component.html -->
+<div class="registro-y-listado">
+  <!-- Sección de Registro de Cliente -->
+  <div class="registro-cliente">
+    <h2>Crear Persona</h2>
+    <label for="txtCedula">Cédula:</label>
+    <input id="txtCedula" [(ngModel)]="cliente.cedula" />
+    <br />
+    <label for="txtNombre">Nombre:</label>
+    <input id="txtNombre" [(ngModel)]="cliente.nombre" />
+    <br />
+    <br />
+    <label for="txtNombre">Apellido:</label>
+    <input id="txtNombre" [(ngModel)]="cliente.apellido" />
+    <br />
+    <label for="txtDireccion">Dirección:</label>
+    <input id="txtDireccion" [(ngModel)]="cliente.direccion" />
+    <br />
+    <br />
+    <label for="txtTelefono">Teléfono:</label>
+    <input id="txtTelefono" [(ngModel)]="cliente.telefono" />
+    <br />
+    <br />
+    <button (click)="agregarPersona()">Guardar/Actualizar</button>
+  </div>
+  <!-- Sección de Listado de Clientes -->
+  <div class="listado-clientes">
+    <h2>Listado de Clientes</h2>
+    <ul>
+      <li *ngFor="let cliente of listadoClientesWS">
+        {{ cliente.cedula }} - {{ cliente.nombre }} - {{ cliente.apellido }} - {{ cliente.direccion }} -{{ cliente.telefono }}
+        <button (click)="eliminarPersona(cliente)">Eliminar</button>
+        <button (click)="listar(cliente)">Listar</button>
+      </li>
+    </ul>
+  </div>
+</div>

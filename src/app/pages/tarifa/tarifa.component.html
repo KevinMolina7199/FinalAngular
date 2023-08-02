@@ -1,0 +1,30 @@
+<!-- cliente.component.html -->
+<div class="registro-y-listado">
+    <!-- Sección de Registro de Cliente -->
+    <div class="registro-cliente">
+      <h2>Crear Persona</h2>
+      <label for="txtCedula">Id:</label>
+      <input id="txtCedula" [(ngModel)]="tarifa.id" />
+      <br />
+      <label for="txtNombre">Tipo:</label>
+      <input id="txtNombre" [(ngModel)]="tarifa.tipo" />
+      <br />
+      <br />
+      <label for="txtNombre">Tarifa:</label>
+      <input id="txtNombre" [(ngModel)]="tarifa.monto" />
+      <br />
+      <br />
+      <button (click)="agregarPersona()">Guardar/Actualizar</button>
+    </div>
+    <!-- Sección de Listado de Clientes -->
+    <div class="listado-clientes">
+      <h2>Listado de Clientes</h2>
+      <ul>
+        <li *ngFor="let tarifa of listadoClientesWS">
+          {{ tarifa.id }} - {{ tarifa.tipo }} - {{ tarifa.monto }}
+          <button (click)="eliminarPersona(tarifa)">Eliminar</button>
+          <button (click)="listar(tarifa)">Listar</button>
+        </li>
+      </ul>
+    </div>
+  </div>
