@@ -1,12 +1,49 @@
-<div class="listado-clientes">
-    <h2>Listado de Clientes</h2>
-    <ul>
-      <li *ngFor="let ticket of listadoTicketsWS">
-        {{ ticket.numero }} - {{ ticket.fechaIngreso }} - {{ ticket.fechaSalida }} - {{ ticket.estado }} -{{ ticket.vehiculo.placa }} - {{ ticket.tarifa.tipo}}
-        <!-- 
-        <button (click)="eliminarPersona(cliente)">Eliminar</button>
-        <button (click)="listar(cliente)">Listar</button>
-        -->
-      </li>
-    </ul>
-  </div>
+<!-- Sección de Registro de Cliente -->
+<div class="registro-cliente">
+    <h2>Ingresar Auto, Creación Ticket</h2>
+    <br />
+    <label for="txtFechaIngreso">Fecha de Ingreso:</label>
+    <input id="txtFechaIngreso" type="time" [(ngModel)]="ticket.fechaIngreso" placeholder="Hora de ingreso (opcional)"
+        disabled />
+    <br />
+    <label for="txtPlaca">Placa:</label>
+    <input id="txtPlaca" [(ngModel)]="ticket.vehiculo.placa" />
+    <br />
+    <label for="txtTarifa">Tipo de Tarifa:</label>
+    <input id="txtTarifa" [(ngModel)]="ticket.tarifa.id" />
+    <br>
+    <br>
+    <br />
+    <button (click)="agregarTicket()">Guardar</button>
+</div>
+<div class="registro-y-listado">
+    <!-- Sección de Registro de Cliente -->
+    <div class="registro-cliente">
+        <h2>Salida Auto, Actualización Ticket</h2>
+        <label for="txtNumeroSalida">Numero:</label>
+        <input id="txtNumeroSalida" [(ngModel)]="ticket.numero" placeholder="Numero de Ticket" />
+        <br />
+        <label for="txtFechaSalida">Fecha de Salida:</label>
+        <input id="txtFechaSalida" type="time" [(ngModel)]="ticket.fechaSalida" required />
+        <button (click)="agregarHoraActual()">Hora Actual</button>
+        <br>
+        <label for="txtPlacaSalida">Placa:</label>
+        <input id="txtPlacaSalida" [(ngModel)]="ticket.vehiculo.placa" />
+        <br>
+        <br />
+        <button (click)="actualizarTicket()">Actualizar</button>
+    </div>
+
+    <!-- Sección de Listado de Tickets -->
+    <div class="listado-clientes">
+        <h2>Listado de Tickets</h2>
+        <ul>
+            <li *ngFor="let ticket of listadoTicketsWS">
+                {{ ticket.numero }} - {{ ticket.fechaIngreso }} - {{ ticket.fechaSalida }} - {{ ticket.estado }} -{{
+                ticket.vehiculo.placa }} - {{ticket.tarifa.tipo}}
+                <button (click)="listar(ticket)">Listar</button>
+                <button (click)="eliminarTicket(ticket)">Eliminar</button>
+            </li>
+        </ul>
+    </div>
+</div>

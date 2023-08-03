@@ -2,7 +2,7 @@
 <div class="registro-y-listado">
     <!-- Sección de Registro de Cliente -->
     <div class="registro-cliente">
-      <h2>Crear Persona</h2>
+      <h2>Crear Tarifa</h2>
       <label for="txtCedula">Id:</label>
       <input id="txtCedula" [(ngModel)]="tarifa.id" />
       <br />
@@ -18,7 +18,7 @@
     </div>
     <!-- Sección de Listado de Clientes -->
     <div class="listado-clientes">
-      <h2>Listado de Clientes</h2>
+      <h2>Listado de Tarifas</h2>
       <ul>
         <li *ngFor="let tarifa of listadoClientesWS">
           {{ tarifa.id }} - {{ tarifa.tipo }} - {{ tarifa.monto }}

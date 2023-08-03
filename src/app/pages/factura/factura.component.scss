@@ -1,0 +1,78 @@
+/* cliente.component.css */
+.registro-y-listado {
+    display: flex;
+  }
+  
+  .registro-cliente {
+    flex: 1;
+    margin-right: 20px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .registro-cliente h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  .registro-cliente label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .registro-cliente input {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 0.7rem;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+  }
+  
+  .registro-cliente input:focus {
+    outline: none;
+    border-color: #0056b3;
+  }
+  
+  .registro-cliente button {
+    padding: 0.7rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .registro-cliente button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .listado-clientes {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .listado-clientes h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  .listado-clientes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .listado-clientes li {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  

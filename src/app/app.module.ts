@@ -17,6 +17,7 @@ import { ImagenComponent } from './pages/imagen/imagen.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { TarifaComponent } from './pages/tarifa/tarifa.component';
 import { TicketComponent } from './pages/ticket/ticket.component';
+import { TicketSComponent } from './pages/ticket-s/ticket-s.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { TicketComponent } from './pages/ticket/ticket.component';
     InicioComponent,
     TarifaComponent,
     TicketComponent,
+    TicketSComponent,
   ],
   imports: [
     BrowserModule,

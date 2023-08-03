@@ -3,8 +3,8 @@ import { Vehiculo } from "./vehiculo";
 
 export interface Ticket{
     estado: string;
-    fechaIngreso: Date;
-    fechaSalida: Date;
+    fechaIngreso: string | null; // Permitimos que el campo sea de tipo string o null
+    fechaSalida: string | null;
     numero: number;
     vehiculo: Vehiculo;
     tarifa: Tarifa;
